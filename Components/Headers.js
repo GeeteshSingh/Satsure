@@ -7,7 +7,7 @@ const Banner = () => {
       backgroundColor='#116366'
       placement='left'
       leftComponent={{ icon: 'menu', color: '#fff' }}
-      centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
+      centerComponent={{ icon: 'menu', text: 'Name', style: { color: '#fff' } }}
       rightComponent={{ icon: 'home', color: '#fff' }}
     />
   )

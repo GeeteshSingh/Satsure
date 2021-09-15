@@ -32,7 +32,7 @@ const ChatUI = () => {
   }, [])
 
   return (
-    <View style={{ flex: 1, padding: 24, height: 90 }}>
+    <View style={{ flex: 1, padding: 24, height: 70 }}>
       {isLoading ? (
         <ActivityIndicator />
       ) : (
@@ -40,8 +40,22 @@ const ChatUI = () => {
           data={data?.categories}
           keyExtractor={({ id }, index) => id}
           renderItem={({ item }) => (
-            <Card style={styles.cards}>
-              <Text style={{fontSize:20}}>
+            <Card
+              style={{
+                backgroundColor: item.color,
+                padding: 20,
+                margin: 5,
+                shadowColor: '#000',
+                shadowOffset: {
+                  width: 0,
+                  height: 2
+                },
+                shadowOpacity: 0.25,
+                shadowRadius: 3.84,
+                elevation: 5
+              }}
+            >
+              <Text style={{ fontSize: 20 }}>
                 {item.title}, {item.categories}
               </Text>
             </Card>
@@ -52,12 +66,6 @@ const ChatUI = () => {
   )
 }
 
-const styles = StyleSheet.create({
-  cards: {
-    // backgroundColor: { color }
-    // height:30
-  }
-})
-
+const styles = StyleSheet.create({})
 
 export default ChatUI
