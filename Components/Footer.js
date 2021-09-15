@@ -10,9 +10,8 @@ export default function MyTabs() {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-evenly',
-        height: 46,
         padding:10,
-        marginVertical:153
+        bottom:0,
       }}
     >
       {/* <Text>Home</Text> */}

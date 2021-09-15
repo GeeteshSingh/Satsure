@@ -27,7 +27,7 @@ export default function App() {
             Title
           </Text>
         </View>
-        <View style={{ height: 800, fontSize: 45 }}>
+        <View style={{ height: '88%', fontSize: 45 }}>
           <ChatUI />
           <MyTabs />
         </View>
