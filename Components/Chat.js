@@ -5,7 +5,8 @@ import {
   ScrollView,
   Text,
   View,
-  StyleSheet
+  StyleSheet,
+  SafeAreaView
 } from 'react-native'
 import { Avatar, Button, Card, Title, Paragraph } from 'react-native-paper'
 
@@ -32,7 +33,8 @@ const ChatUI = () => {
   }, [])
 
   return (
-    <View style={{ flex: 1, padding: 24 }}>
+    <View style={{ flex: 1, padding: 25 }}>
+    <SafeAreaView>
       {isLoading ? (
         <ActivityIndicator />
       ) : (
@@ -45,6 +47,7 @@ const ChatUI = () => {
                 backgroundColor: item.color,
                 padding: 20,
                 margin: 5,
+                borderRadius: 10,
                 shadowColor: '#000',
                 shadowOffset: {
                   width: 0,
@@ -55,13 +58,14 @@ const ChatUI = () => {
                 elevation: 5
               }}
             >
-              <Text style={{ fontSize: 20 }}>
+              <Text style={{ fontSize: 18 }}>
                 {item.title}, {item.categories}
               </Text>
             </Card>
           )}
         />
       )}
+      </SafeAreaView>
     </View>
   )
 }

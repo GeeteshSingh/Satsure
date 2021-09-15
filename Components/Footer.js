@@ -1,6 +1,5 @@
 import React from 'react'
 import { StyleSheet, Text, View, Image } from 'react-native'
-import { Divider } from 'react-native-elements'
 import { MaterialIcons, FontAwesome, Ionicons } from '@expo/vector-icons'
 
 export default function MyTabs() {
@@ -11,7 +10,9 @@ export default function MyTabs() {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-evenly',
-        height: 39
+        height: 46,
+        padding:10,
+        marginVertical:153
       }}
     >
       {/* <Text>Home</Text> */}
