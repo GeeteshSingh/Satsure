@@ -32,7 +32,7 @@ const ChatUI = () => {
   }, [])
 
   return (
-    <View style={{ flex: 1, padding: 24, height: 70 }}>
+    <View style={{ flex: 1, padding: 24 }}>
       {isLoading ? (
         <ActivityIndicator />
       ) : (

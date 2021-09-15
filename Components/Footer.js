@@ -11,16 +11,16 @@ export default function MyTabs() {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-evenly',
-        height: 25
+        height: 39
       }}
     >
       {/* <Text>Home</Text> */}
       <MaterialIcons name='home-filled' size={24} color='white' />
-      <Divider orientation='vertical' width={1} color='#fff' />
+      <Text style={{ color: '#fff' }}>|</Text>
       <FontAwesome name='phone' size={24} color='white' />
-      <Divider orientation='vertical' width={1} color='#fff' />
+      <Text style={{ color: '#fff' }}>|</Text>
       <Ionicons name='stats-chart' size={24} color='white' />
-      <Divider orientation='vertical' width={1} color='#fff' />
+      <Text style={{ color: '#fff' }}>|</Text>
       <Ionicons name='md-location-sharp' size={24} color='white' />
     </View>
   )

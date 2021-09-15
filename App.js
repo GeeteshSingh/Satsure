@@ -15,12 +15,13 @@ export default function App() {
         <View>
           <Banner />
         </View>
-        
+
         <View>
           <Text
             style={{
               fontSize: 17,
-              textAlign: 'center'
+              textAlign: 'center',
+              marginTop: 8
             }}
           >
             Title
@@ -28,11 +29,11 @@ export default function App() {
         </View>
         <View style={{ height: 800, fontSize: 45 }}>
           <ChatUI />
-        </View>
-        <View style={styles.footers}>
           <MyTabs />
         </View>
-        <StatusBar style='#0c494b' />
+        <View style={styles.footers}>
+          <StatusBar style='#0c494b' />
+        </View>
       </View>
     </SafeAreaProvider>
   )
