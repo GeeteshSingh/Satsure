@@ -1,21 +1,39 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar'
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
+
+// components
+import Banner from './Components/Headers'
+import MyTabs from './Components/Footer'
+import ChatUI from './Components/Chat'
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <View>
+        <Banner />
+      </View>
+      <View style={{height:800, fontSize:45}}>
+        <ChatUI />
+      </View>
+      <View>
+        <MyTabs />
+      </View>
+      <StatusBar style='light' />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
-});
+  text: {
+    fontSize: 20,
+    fontFamily: 'sans-serif'
+  },
+  footer:{
+    bottom:0
+  }
+})
