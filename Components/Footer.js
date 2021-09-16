@@ -10,7 +10,7 @@ export default function MyTabs() {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-evenly',
-        padding:10,
+        padding: 10
         // bottom:0,
       }}
     >

@@ -5,8 +5,7 @@ import {
   ScrollView,
   Text,
   View,
-  StyleSheet,
-  SafeAreaView
+  StyleSheet
 } from 'react-native'
 import { Avatar, Button, Card, Title, Paragraph } from 'react-native-paper'
 
@@ -39,24 +38,21 @@ const ChatUI = () => {
     sortedCategories[sortedCategories.length - 1]?.value ?? 0
   )
 
-  console.log({ minWidth, maxWidth })
-
   return (
     <View style={{ flex: 1, padding: 25 }}>
-      <SafeAreaView>
-        <Text
-          style={{
-            fontSize: 17,
-            textAlign: 'center',
-            marginTop: 8
-          }}
-        >
-          {data.title}
-        </Text>
-
-        {isLoading ? (
-          <ActivityIndicator />
-        ) : (
+      {isLoading ? (
+        <ActivityIndicator />
+      ) : (
+        <>
+          <Text
+            style={{
+              fontSize: 17,
+              textAlign: 'center',
+              marginTop: 8
+            }}
+          >
+            {data?.title}
+          </Text>
           <FlatList
             data={data?.categories}
             keyExtractor={({ id }, index) => id}
@@ -87,8 +83,8 @@ const ChatUI = () => {
               </Card>
             )}
           />
-        )}
-      </SafeAreaView>
+        </>
+      )}
     </View>
   )
 }

@@ -30,20 +30,18 @@ const Banner = () => {
       style={{
         backgroundColor: '#116366',
         flexDirection: 'row',
-        alignItems: 'left',
+        alignItems: 'center',
         justifyContent: 'space-evenly',
-        height: 70,
-        top: 0,
-        flex: 1
+        height: 70
       }}
     >
       <Ionicons name='md-reorder-three' size={24} color='white' />
       <Ionicons name='person' size={24} color='white' />
-      <Text style={{ color: '#fff', paddingRight: 12 }}>{data.name}</Text>
+      <Text style={{ color: '#fff', paddingRight: 12 }}>{data?.name}</Text>
       {/* <Divider orientation='vertical' width={1} color='#fff' /> */}
       <Text style={{ color: '#fff' }}>|</Text>
       <FontAwesome name='phone' size={24} color='white' />
-      <Text style={{ color: '#fff', textAlign: left }}>{data.mobileNo}</Text>
+      <Text style={{ color: '#fff', textAlign: left }}>{data?.mobileNo}</Text>
     </View>
   )
 }
