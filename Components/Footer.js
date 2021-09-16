@@ -11,7 +11,7 @@ export default function MyTabs() {
         alignItems: 'center',
         justifyContent: 'space-evenly',
         padding:10,
-        bottom:0,
+        // bottom:0,
       }}
     >
       {/* <Text>Home</Text> */}

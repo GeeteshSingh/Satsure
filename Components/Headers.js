@@ -31,7 +31,7 @@ const Banner = () => {
         backgroundColor: '#116366',
         flexDirection: 'row',
         alignItems: 'left',
-        justifyContent: 'space-around',
+        justifyContent: 'space-evenly',
         height: 70,
         top: 0,
         flex: 1

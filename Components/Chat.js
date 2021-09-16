@@ -44,6 +44,16 @@ const ChatUI = () => {
   return (
     <View style={{ flex: 1, padding: 25 }}>
       <SafeAreaView>
+        <Text
+          style={{
+            fontSize: 17,
+            textAlign: 'center',
+            marginTop: 8
+          }}
+        >
+          {data.title}
+        </Text>
+
         {isLoading ? (
           <ActivityIndicator />
         ) : (

@@ -7,6 +7,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context'
 import Banner from './Components/Headers'
 import MyTabs from './Components/Footer'
 import ChatUI from './Components/Chat'
+import { marginTop } from 'styled-system'
 
 export default function App() {
   return (
@@ -17,21 +18,14 @@ export default function App() {
         </View>
 
         <View>
-          <Text
-            style={{
-              fontSize: 17,
-              textAlign: 'center',
-              marginTop: 8
-            }}
-          >
-            Title
-          </Text>
+         
         </View>
         <View style={{ height: '88%', fontSize: 45 }}>
           <ChatUI />
-          <MyTabs />
         </View>
         <View style={styles.footers}>
+          <MyTabs />
+
           <StatusBar style='#0c494b' />
         </View>
       </View>
@@ -48,6 +42,7 @@ const styles = StyleSheet.create({
     fontFamily: 'sans-serif'
   },
   footers: {
-    bottom: 0
+    bottom: 0,
+    marginTop: 20
   }
 })
