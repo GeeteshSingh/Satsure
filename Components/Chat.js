@@ -32,39 +32,52 @@ const ChatUI = () => {
     SatSureAPI()
   }, [])
 
+  const sortedCategories =
+    data?.categories?.slice()?.sort((a, b) => a.value - b.value) ?? []
+  const minWidth = Number(sortedCategories[0]?.value ?? 0)
+  const maxWidth = Number(
+    sortedCategories[sortedCategories.length - 1]?.value ?? 0
+  )
+
+  console.log({ minWidth, maxWidth })
+
   return (
     <View style={{ flex: 1, padding: 25 }}>
-    <SafeAreaView>
-      {isLoading ? (
-        <ActivityIndicator />
-      ) : (
-        <FlatList
-          data={data?.categories}
-          keyExtractor={({ id }, index) => id}
-          renderItem={({ item }) => (
-            <Card
-              style={{
-                backgroundColor: item.color,
-                padding: 20,
-                margin: 5,
-                borderRadius: 10,
-                shadowColor: '#000',
-                shadowOffset: {
-                  width: 0,
-                  height: 2
-                },
-                shadowOpacity: 0.25,
-                shadowRadius: 3.84,
-                elevation: 5
-              }}
-            >
-              <Text style={{ fontSize: 18 }}>
-                {item.title}, {item.categories}
-              </Text>
-            </Card>
-          )}
-        />
-      )}
+      <SafeAreaView>
+        {isLoading ? (
+          <ActivityIndicator />
+        ) : (
+          <FlatList
+            data={data?.categories}
+            keyExtractor={({ id }, index) => id}
+            renderItem={({ item }) => (
+              <Card
+                style={{
+                  backgroundColor: item.color,
+                  padding: 20,
+                  margin: 5,
+                  borderRadius: 10,
+                  shadowColor: '#000',
+                  shadowOffset: {
+                    width: 0,
+                    height: 2
+                  },
+                  shadowOpacity: 0.25,
+                  shadowRadius: 3.84,
+                  elevation: 5,
+                  maxWidth: `${50 + (Number(item.value) - minWidth) / 100}%`
+                }}
+              >
+                <Text
+                  style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 8 }}
+                >
+                  {item.title}
+                </Text>
+                <Text style={{ fontSize: 16 }}>Value: {item.value}</Text>
+              </Card>
+            )}
+          />
+        )}
       </SafeAreaView>
     </View>
   )
